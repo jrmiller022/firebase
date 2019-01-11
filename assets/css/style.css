@@ -1,0 +1,27 @@
+.table {
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-shadow: 0 0 20px #000000;
+    color: red;
+    font-size: 75px;
+}
+
+h2 {
+    text-shadow: 0 0 20px #000000;
+    color: yellow;
+    font-size: 45px;
+}
+
+.card-header {
+    border-color: blue;
+}
+
+#add-user {
+    background-color: blue;
+    color: white;
+}
+
+
