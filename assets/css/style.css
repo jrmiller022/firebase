@@ -1,11 +1,14 @@
+body {
+    background-color: gray;
+}
 .table {
-    padding: 25px;
     box-sizing: border-box;
+    display: inline-table;
 }
 
 h1 {
     text-shadow: 0 0 20px #000000;
-    color: red;
+    color: red;             
     font-size: 75px;
 }
 
@@ -22,6 +25,10 @@ h2 {
 #add-user {
     background-color: blue;
     color: white;
+}
+
+.col-lg-12 {
+    padding: 0px;
 }
 
 

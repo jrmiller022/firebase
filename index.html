@@ -3,80 +3,86 @@
 
 <head>
     <meta charset="utf-8">
+    <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Firebase Reference-->
     <script src="https://www.gstatic.com/firebasejs/5.7.2/firebase.js"></script>
+    <!--Moment.js Reference-->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!--Stylesheet link-->
     <link href="assets/css/style.css" rel="stylesheet">
-    <title>Employee Data Management</title>
+    <title>Train Tacker</title>
 </head>
 
 <body>
-    <div class="container jumbotron text-white bg-dark">
-        <div class="row d-flex justify-content-center">
-            <div class="col-m-12">
-                <h1>Anytime is Train Time</h1>
+    <div class="container">
+        <div class="jumbotron text-white bg-dark">
+            <div class="row d-flex justify-content-center">
+                <div class="col-m-12">
+                    <h1>Anytime is Train Time</h1>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="col-m-12">
+                    <h2>CHOO CHOOOOOO</h2>
+                </div>
             </div>
         </div>
-        <div class="row d-flex justify-content-center">
-            <div class="col-m-12">
-                <h2>CHOO CHOOOOOO</h2>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Destination</th>
+                    <th scope="col">Frequency (min)</th>
+                    <th scope="col">Next Arrival</th>
+                    <th scope="col">Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td id="name-display"></td>
+                    <td id="destination-display"></td>
+                    <td id="firstTrainTime-display"></td>
+                    <td id="nextArrival-display"></td>
+                    <td id="minutesAway-display"></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Add train-->
+        <div class="col-lg-12">
+            <div class="card card-default">
+                <div class="card-header">
+                    <strong>Add Train</strong>
+                </div>
+                <div class="card-body">
+                    <!-- Sign-up Form (note the various input "types")-->
+                    <form role="form">
+                        <div class="form-group row">
+                            <label for="name-input">Train Name:</label>
+                            <input class="form-control" id="name-input" type="text">
+                        </div>
+                        <div class="form-group row">
+                            <label for="destination-input">Destination:</label>
+                            <input class="form-control" id="destination-input" type="text">
+                        </div>
+                        <div class="form-group row">
+                            <label for="firstTrainTimeinput">First Train Time: (HH:mm - Military Time)</label>
+                            <input class="form-control" id="firstTrainTime-input" type="text">
+                        </div>
+                        <div class="form-group row">
+                            <label for="frequency-input">Frequency (min)</label>
+                            <textarea class="form-control" id="frequency-input" type="text"></textarea>
+                        </div>
+                        <button class="btn btn-default" id="add-user" type="submit">Submit</button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col">Name</th>
-                <th scope="col">Destination</th>
-                <th scope="col">Frequency (min)</th>
-                <th scope="col">Next Arrival</th>
-                <th scope="col">Minutes Away</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td id="name-display"></td>
-                <td id="destination-display"></td>
-                <td id="firstTrainTime-display"></td>
-                <td id="comment-display"></td>
-                <td id="nextArrival-display"></td>
-
-            </tr>
-        </tbody>
-    </table>
-    <!-- Sign-Up Card-->
-    <div class="col-lg-12">
-        <div class="card card-default">
-            <div class="card-header">
-                Add Train
-            </div>
-            <div class="card-body">
-
-                <!-- Sign-up Form (note the various input "types")-->
-                <form role="form">
-                    <div class="form-group row">
-                        <label for="name-input">Train Name:</label>
-                        <input class="form-control" id="name-input" type="text">
-                    </div>
-                    <div class="form-group row">
-                        <label for="destinnation-input">Destination:</label>
-                        <input class="form-control" id="destination-input" type="role">
-                    </div>
-                    <div class="form-group row">
-                        <label for="firstTrainTimeinput">First Train Time: (HH:mm - Military Time)</label>
-                        <input class="form-control" id="firstTrainTime-input" type="start-date">
-                    </div>
-                    <div class="form-group row">
-                        <label for="frequency-input">Frequency (min)</label>
-                        <textarea class="form-control" id="frequency-input" rows="5"></textarea>
-                    </div>
-                    <button class="btn btn-default" id="add-user" type="submit">Submit</button>
-                </form>
-            </div>
-        </div>
-    </div>
-    
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
