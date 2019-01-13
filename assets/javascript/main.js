@@ -65,31 +65,8 @@ firebase.initializeApp(config);
       console.log(destination);
       console.log(firstTrainTime);
       console.log(frequency);
-  
-      // Handle the errors
-    }, function(errorObject) {
-      console.log("Errors handled: " + errorObject.code);
-    });
-  
-    database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot) {
-  
-    //     var destination = moment(snapshot.val().destination);
-    //  // Change the HTML to reflect
-    //  $("#name-display").text(snapshot.val().name);
-    //  $("#destinaton-display").text(snapshot.val().destination);
-    //  $("#firstTrainTime-display").text(snapshot.val().firstTrainTime);
-    //  $("#frequency-display").text(snapshot.val().frequency);
-    //  console.log(destination.diff(moment(), "destination"));
-    // });
 
-    // // New variable
-    // var diffTime;
-    // var tRemainder;
-    // var nextTrainTime;
-
-    // // Train time entered on the entry form
-    // var firstTime = 0;
-    var intFreq = parseInt(frequency);
+      var intFreq = parseInt(frequency);
 
     var firstTimeConverted = moment(firstTrainTime, "HH:mm").subtract(1, "years");
     console.log(firstTimeConverted);
@@ -132,8 +109,12 @@ firebase.initializeApp(config);
     tableFrequency.append(frequency);
     tableTrainTime.append(nextTrain);
     tableMinutesAway.append(tMinutesTillTrain); 
-  });
-
+  
+      // Handle the errors
+    }, function(errorObject) {
+      console.log("Errors handled: " + errorObject.code);
+    });
+    
 })
   
  
