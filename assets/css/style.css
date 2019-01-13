@@ -1,25 +1,43 @@
 body {
     background-color: gray;
 }
+
 .table {
     box-sizing: border-box;
-    display: inline-table;
+    display: inline-table;  
+}
+
+.jumbotron {
+    background-image: url(/assets/images/subway.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 175px;
+}
+
+th {
+    background-color: blue;
+    color: white;
 }
 
 h1 {
     text-shadow: 0 0 20px #000000;
     color: red;             
     font-size: 75px;
+    padding-left: 350px;
+    text-align: right;
 }
 
 h2 {
     text-shadow: 0 0 20px #000000;
     color: yellow;
     font-size: 45px;
+    padding-left: 350px;
 }
 
 .card-header {
     border-color: blue;
+    background-color: blue;
+    color: white;
 }
 
 #add-user {

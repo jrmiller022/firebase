@@ -25,7 +25,7 @@ firebase.initializeApp(config);
     $("#add-user").on("click", function(event) {
       event.preventDefault();
   
-      // Grabbed values from text-boxes
+      // Grab values from text-boxes
       name = $("#name-input").val().trim();
       $("#name-input").val("");
 
@@ -66,7 +66,7 @@ firebase.initializeApp(config);
       console.log(firstTrainTime);
       console.log(frequency);
 
-      var intFreq = parseInt(frequency);
+    var intFreq = parseInt(frequency);
 
     var firstTimeConverted = moment(firstTrainTime, "HH:mm").subtract(1, "years");
     console.log(firstTimeConverted);
@@ -78,16 +78,16 @@ firebase.initializeApp(config);
     // Difference between the times
     var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
 
-    // Time apart (remainder)
+    // Ramining time
     var tRemainder = diffTime % intFreq;
 
-    // Minutes Until Train
+    // Next train in minutes
     var tMinutesTillTrain = intFreq - tRemainder;
 
-    // Train arrival next
+    // Arrival for next train
     var nextTrain = moment().add(tMinutesTillTrain, "minutes").format("HH:mm A");
 
-    //Change the HTML to reflect the inputs into the table
+    //Puts html into tables.
     var tableRow = $("<tr>");
     var tableTrainName = $("<td>");
     var tableDestination = $("<td>");
@@ -95,7 +95,7 @@ firebase.initializeApp(config);
     var tableTrainTime = $("<td>");
     var tableMinutesAway = $("<td>");
 
-    // Creates table data for each input.
+    //Append data for input.
     $("tbody").append(tableRow);
     tableRow.append(tableTrainName);
     tableRow.append(tableDestination);
@@ -103,7 +103,7 @@ firebase.initializeApp(config);
     tableRow.append(tableTrainTime);
     tableRow.append(tableMinutesAway);
 
-    // Appends the value to the table in single row
+    // Appends to the table in rows
     tableTrainName.append(name);
     tableDestination.append(destination);
     tableFrequency.append(frequency);
@@ -114,7 +114,7 @@ firebase.initializeApp(config);
     }, function(errorObject) {
       console.log("Errors handled: " + errorObject.code);
     });
-    
+
 })
   
  
