@@ -1,6 +1,6 @@
-# firebase Train App
+# Firebase Train App
 
-## About App - Add your destination and time and the list will show you how many minutes away and when the train arrives. 
+## About App - Add your destination and time to the list and it will show you how many minutes away and when the train arrives. 
 
 ### Train Time app was built on a firebase server. Also used with HTML, CSS and javascript.
 
