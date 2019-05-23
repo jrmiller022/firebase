@@ -2,7 +2,7 @@
     background-image: url(../images/subway.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 175px;
+    padding-bottom: 100px;
 }
 
 body {
@@ -10,8 +10,7 @@ body {
 }
 
 .table {
-    box-sizing: border-box;
-    display: inline-table;  
+    display: inline-table; 
 }
 
 th {
@@ -23,15 +22,15 @@ h1 {
     text-shadow: 0 0 20px #000000;
     color: red;             
     font-size: 75px;
-    padding-left: 350px;
-    text-align: right;
+    padding-left: 50px;
+    text-align: center;
 }
 
 h2 {
     text-shadow: 0 0 20px #000000;
     color: yellow;
     font-size: 45px;
-    padding-left: 350px;
+    padding-left: 50px;
 }
 
 .card-header {
@@ -52,7 +51,7 @@ h2 {
 @media only screen and (max-width: 768px) {
     body      {
     padding: 0px;
-    margin: 0;
+    margin-right: 0px;
     }
 }
 
