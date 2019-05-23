@@ -1,3 +1,10 @@
+.jumbotron {
+    background-image: url(../images/subway.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 175px;
+}
+
 body {
     background-color: gray;
 }
@@ -5,13 +12,6 @@ body {
 .table {
     box-sizing: border-box;
     display: inline-table;  
-}
-
-.jumbotron {
-    background-image: url(/assets/images/subway.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-bottom: 175px;
 }
 
 th {
