@@ -6,7 +6,7 @@
 
 ### Screen shots of app.
 
-![alt text](/assets/images/logo.png)
+![alt text](/assets/images/subway-screenshot.png)
 
 ![alt text](/assets/images/train-log.png)
 
